@@ -1,3 +1,10 @@
-from django.shortcuts import render
+from rest_framework import generics
+from .models import *
+from .serializers import NewsSerializer, CategorySerializer
 
-# Create your views here.
+
+
+class ListNews(generics.ListAPIView):
+    serializer_class = NewsSerializer
+    queryset = News.objects.all()
+
