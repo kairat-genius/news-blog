@@ -4,7 +4,7 @@ from .models import News, Category
 class NewsSerializer(serializers.ModelSerializer):
     class Meta:
         model = News
-        fields = '__all__'
+        exclude = ['urls']
 
 class CategorySerializer(serializers.ModelSerializer):
     class Meta:

@@ -1,8 +1,9 @@
 from django.db import models
+from autoslug import AutoSlugField
 
 class Category(models.Model):
     name = models.CharField(max_length=100)
-    urls = models.SlugField(unique=True)
+    urls = AutoSlugField(unique=True, populate_from='name', null=True)
 
     def __str__(self):
         return self.name
@@ -12,7 +13,7 @@ class News(models.Model):
     img = models.BinaryField()
     text = models.TextField()
     create_at = models.DateTimeField(auto_now_add=True)
-    urls = models.SlugField(unique=True)
+    urls = AutoSlugField(unique=True, populate_from='title', null=True)
     category = models.ForeignKey(
         Category,
         related_name="category",

@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'news.apps.NewsConfig',
     'corsheaders',
     'rest_framework',
+    'autoslug',
 
 ]
 
