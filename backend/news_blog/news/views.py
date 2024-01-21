@@ -1,13 +1,34 @@
 from rest_framework import generics
+from rest_framework.response import Response
+
 from .models import *
-from .serializers import NewsSerializer, CategorySerializer
+from .serializers import NewsSerializer, CategorySerializer,CombinedSerializer
 
-
-
-class ListNews(generics.ListAPIView):
-    serializer_class = NewsSerializer
+# class CategoryList(generics.ListAPIView):
+#     queryset = Category.objects.all()
+#     serializer_class = CategorySerializer
+#
+class NewsList(generics.ListAPIView):
     queryset = News.objects.all()
+    serializer_class = NewsSerializer
 
+class NewsDetail(generics.RetrieveAPIView):
+    queryset = News.objects.all()
+    serializer_class = NewsSerializer
+    lookup_field = 'urls'
+class CombinedList(generics.ListAPIView):
+    serializer_class = CombinedSerializer  # CombinedSerializer должен быть создан
+
+    def list(self, request, *args, **kwargs):
+        news_data = News.objects.all()
+        category_data = Category.objects.all()
+
+        combined_data = {
+            'news': NewsSerializer(news_data, many=True).data,
+            'categories': CategorySerializer(category_data, many=True).data,
+        }
+
+        return Response(combined_data)
 
 """Admin panel"""
 class CategoryAddAdmin(generics.CreateAPIView):

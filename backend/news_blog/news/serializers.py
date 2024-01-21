@@ -4,9 +4,13 @@ from .models import News, Category
 class NewsSerializer(serializers.ModelSerializer):
     class Meta:
         model = News
-        exclude = ['urls']
+        fields = '__all__'
 
 class CategorySerializer(serializers.ModelSerializer):
     class Meta:
         model = Category
         fields = ['name']
+
+class CombinedSerializer(serializers.Serializer):
+    news = NewsSerializer(many=True)
+    categories = CategorySerializer(many=True)
