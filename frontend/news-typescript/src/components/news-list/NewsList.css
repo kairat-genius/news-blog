@@ -1,0 +1,123 @@
+#news-list {
+  padding: 60px 0;
+}
+.news-list {
+}
+
+.breaking-news {
+  background: var(--Main-Red, #c31815);
+  width: 93%;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.title-breaking {
+  background: white;
+  width: 157px;
+  height: 54px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.title-breaking h3 {
+  color: #c31815;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 400;
+}
+.breaking-title {
+  margin-left: 60px;
+}
+.breaking-title p {
+  color: #fff;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.main-news {
+  width: 64%;
+}
+.news-categories {
+  padding-top: 45px;
+  padding-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 54px;
+}
+.categories-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 300px;
+}
+.categories-title p {
+  color: var(--Text, #2a2a2a);
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.news-cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+.news-card {
+  width: 413px;
+  height: 520px;
+}
+.news-card img {
+  width: 408px;
+}
+.card-title {
+  padding: 14px;
+}
+.card-title h4 {
+  width: 358px;
+  height: 45px;
+  color: var(--Text, #2a2a2a);
+  font-family: "IBM Plex Serif";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 27px;
+}
+.card-title p {
+  padding-top: 17px;
+  width: 358px;
+  height: 106px;
+  color: var(--Text, #2a2a2a);
+  font-family: "Nunito Sans";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.title-time {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 370px;
+  padding-top: 30px;
+}
+.title-time p {
+  color: var(--Text, #2a2a2a);
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.card-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 404px;
+}

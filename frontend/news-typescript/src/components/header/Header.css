@@ -1,0 +1,39 @@
+#header {
+  padding: 29px 0;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 93%;
+  padding-left: 15px;
+}
+.logo{
+  padding-left: 20px;
+}
+.logo img {
+  width: 62.792px;
+  height: 52px;
+  border: none;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 700px;
+}
+.navbar p {
+  color: var(--Text, #2a2a2a);
+  font-family: "Nunito Sans";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  cursor: pointer;
+}
+.login-panel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 160px;
+}

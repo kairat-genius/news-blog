@@ -1,0 +1,77 @@
+#hero {
+  padding: 45px 0;
+}
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.hero-img img {
+  width: 650px;
+  height: 500px;
+}
+.hero-title {
+  width: 550px;
+  text-align: left;
+  padding-right: 16px;
+}
+
+
+
+.title-trending {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.title-trending p {
+  color: red;
+  font-size: 14px;
+  font-family: "Nunito Sans";
+}
+.trending-icons {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  width: 74px;
+}
+
+
+
+.main-title {
+  padding-top: 15px;
+}
+.main-title h1 {
+  color: var(--Text, #2a2a2a);
+  font-family: "IBM Plex Serif";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.main-title p {
+  color: var(--Text, #2a2a2a);
+  font-family: Poppins;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 165%;
+  padding-top: 20px;
+}
+
+
+
+.title-time {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 310px;
+  padding-top: 30px;
+}
+.title-time p {
+  color: var(--Text, #2a2a2a);
+  font-family: Poppins;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 165%;
+}
