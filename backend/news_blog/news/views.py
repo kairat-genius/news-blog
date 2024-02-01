@@ -45,7 +45,7 @@ class CategoryDetailAdmin(generics.RetrieveUpdateDestroyAPIView):
 class NewsAddAdmin(generics.CreateAPIView):
     serializer_class = NewsSerializer
     queryset = News.objects.all()
-    lookup_field = 'urls'
+
 
 class NewsDetailAdmin(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = NewsSerializer
