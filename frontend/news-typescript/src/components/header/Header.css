@@ -1,5 +1,7 @@
 #header {
   padding: 29px 0;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(14px);
 }
 .header {
   display: flex;
@@ -8,7 +10,7 @@
   width: 93%;
   padding-left: 15px;
 }
-.logo{
+.logo {
   padding-left: 20px;
 }
 .logo img {
