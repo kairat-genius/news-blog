@@ -2,11 +2,11 @@ from rest_framework import generics
 from rest_framework.response import Response
 
 from .models import *
-from .serializers import NewsSerializer, CategorySerializer,CombinedSerializer
+from .serializers import NewsSerializer, CategorySerializer, NewsDetailSerializer, NewsAddAdminSer
 
-# class CategoryList(generics.ListAPIView):
-#     queryset = Category.objects.all()
-#     serializer_class = CategorySerializer
+class CategoryList(generics.ListAPIView):
+    queryset = Category.objects.all()
+    serializer_class = CategorySerializer
 #
 class NewsList(generics.ListAPIView):
     queryset = News.objects.all()
@@ -14,21 +14,8 @@ class NewsList(generics.ListAPIView):
 
 class NewsDetail(generics.RetrieveAPIView):
     queryset = News.objects.all()
-    serializer_class = NewsSerializer
+    serializer_class = NewsDetailSerializer
     lookup_field = 'urls'
-class CombinedList(generics.ListAPIView):
-    serializer_class = CombinedSerializer  # CombinedSerializer должен быть создан
-
-    def list(self, request, *args, **kwargs):
-        news_data = News.objects.all()
-        category_data = Category.objects.all()
-
-        combined_data = {
-            'news': NewsSerializer(news_data, many=True).data,
-            'categories': CategorySerializer(category_data, many=True).data,
-        }
-
-        return Response(combined_data)
 
 """Admin panel"""
 class CategoryAddAdmin(generics.CreateAPIView):
@@ -43,11 +30,11 @@ class CategoryDetailAdmin(generics.RetrieveUpdateDestroyAPIView):
 
 
 class NewsAddAdmin(generics.CreateAPIView):
-    serializer_class = NewsSerializer
+    serializer_class = NewsAddAdminSer
     queryset = News.objects.all()
 
 
 class NewsDetailAdmin(generics.RetrieveUpdateDestroyAPIView):
-    serializer_class = NewsSerializer
+    serializer_class = NewsAddAdminSer
     queryset = News.objects.all()
     lookup_field = 'urls'

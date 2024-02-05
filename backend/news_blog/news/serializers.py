@@ -1,17 +1,30 @@
 from rest_framework import serializers
-from .models import News, Category
+from .models import News, Category, Additional_news
 
 class CategorySerializer(serializers.ModelSerializer):
     class Meta:
         model = Category
-        fields = ['name']
+        fields = '__all__'
 
-class NewsSerializer(serializers.ModelSerializer):
+class Additional_newsSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Additional_news
+        fields = '__all__'
+
+class NewsDetailSerializer(serializers.ModelSerializer):
     category = CategorySerializer()
+    additional_news = Additional_newsSerializer()
     class Meta:
         model = News
         fields = '__all__'
 
-class CombinedSerializer(serializers.Serializer):
-    news = NewsSerializer(many=True)
-    categories = CategorySerializer(many=True)
+class NewsSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = News
+        fields = '__all__'
+
+
+class NewsAddAdminSer(serializers.ModelSerializer):
+    class Meta:
+        model = News
+        fields = '__all__'
