@@ -1,5 +1,6 @@
 #news-list {
   padding: 60px 0;
+  background: #f1f2f3;
 }
 .news-list {
 }
@@ -38,11 +39,15 @@
   font-weight: 500;
 }
 
+.main-news-list {
+  display: flex;
+  padding-top: 40px;
+}
+
 .main-news {
   width: 64%;
 }
 .news-categories {
-  padding-top: 45px;
   padding-bottom: 10px;
   display: flex;
   align-items: center;
@@ -67,13 +72,19 @@
 .news-cards {
   display: flex;
   flex-wrap: wrap;
+  gap: 17px;
 }
 .news-card {
-  width: 413px;
-  height: 520px;
+  width: 403px;
+  height: 605px;
+  fill: #fff;
+  filter: drop-shadow(0px 2px 14px rgba(42, 42, 42, 0.24));
+  border: 1px solid rgba(0.1, 0.1, 0.1, 0.1);
+  position: relative;
 }
 .news-card img {
-  width: 408px;
+  width: 403px;
+  object-fit: contain;
 }
 .card-title {
   padding: 14px;
@@ -105,7 +116,7 @@
   justify-content: start;
   align-items: center;
   width: 370px;
-  padding-top: 30px;
+  /* padding-top: 30px; */
 }
 .title-time p {
   color: var(--Text, #2a2a2a);
@@ -119,5 +130,87 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 404px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding-top: 10px;
+}
+
+.live-news {
+  display: flex;
+  flex-direction: column;
+  margin-left: 40px;
+}
+.live-block {
+  padding-top: 10px;
+  width: 335px;
+  height: 320px;
+}
+.live-block img {
+  width: 336px;
+  height: 218px;
+  object-fit: cover;
+  padding-top: 10px;
+}
+.live-block h4 {
+  color: var(--Main-Red, #c31815);
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 65px;
+}
+.live-block p {
+  color: var(--Text, #2a2a2a);
+  font-family: "IBM Plex Serif";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+}
+.location-new {
+  color: var(--Text, #2a2a2a);
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  margin: 20px 0;
+}
+.message-news {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  padding: 15px;
+  width: 305px;
+  height: 190px;
+  background: #fff;
+}
+.message-news p {
+  color: #141414;
+  font-family: "Nunito Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  padding-top: 10px;
+}
+.message-news input {
+  width: 92%;
+  height: 60px;
+  padding-left: 20px;
+}
+.message-news button {
+  border-radius: 2px;
+  background: #c31815;
+  width: 100px;
+  height: 40px;
+  color: #fff;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
 }

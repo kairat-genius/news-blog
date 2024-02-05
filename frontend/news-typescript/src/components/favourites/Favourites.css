@@ -1,0 +1,53 @@
+#favourites {
+  padding: 100px 0;
+  background: #f1f2f3;
+}
+#favourites h3 {
+  color: var(--Text, #2a2a2a);
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 149px;
+  margin: 22px 0;
+}
+.favourites {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.favourites img {
+  width: 304px;
+  height: 170px;
+  background-color: aqua;
+}
+.favourites h4 {
+  color: var(--Text, #2a2a2a);
+  font-family: "IBM Plex Serif";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 27px;
+  width: 380px;
+}
+.favourites p {
+  color: var(--Text, #2a2a2a);
+  font-family: "Nunito Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 163.41%;
+  padding-top: 16px;
+  width: 380px;
+}
+.first-block {
+  display: flex;
+  align-items: center;
+}
+.second-block {
+  display: flex;
+  align-items: center;
+}
