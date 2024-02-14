@@ -1,13 +1,11 @@
-from fastapi import FastAPI
-
+from fastapi import FastAPI, Path, Query, Body
+from schemas import Book, Author, BookOut
 
 app = FastAPI()
 
+@app.post('/book', response_model=BookOut)
+def create_book(item: Book):
+    book = item.dict()
+    book["id"] = 3
+    return book
 
-@app.get('/')
-def home():
-    return {"key": "hello"}
-
-@app.get('/{pk}')
-def get_item(pk: int, q: int = None):
-    return {"key": pk, "q": q}
