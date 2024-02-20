@@ -1,0 +1,53 @@
+#form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 600px;
+}
+
+.form input {
+  width: 360px;
+  height: 39px;
+  border-radius: 10px;
+}
+.form .title {
+  padding-top: 10px;
+  padding-bottom: 120px;
+  padding-left: 10px;
+}
+.form .title::placeholder {
+}
+
+.btns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 430px;
+}
+.btns .create {
+  width: 130px;
+  height: 34px;
+  background-color: rgb(63, 235, 63);
+  border: none;
+  border-radius: 6px;
+}
+.btns .delete {
+  width: 130px;
+  height: 34px;
+  background-color: rgb(219, 13, 13);
+  border: none;
+  border-radius: 6px;
+}
+.btns .edit {
+  width: 130px;
+  height: 34px;
+  background-color: rgb(184, 232, 41);
+  border: none;
+  border-radius: 6px;
+}

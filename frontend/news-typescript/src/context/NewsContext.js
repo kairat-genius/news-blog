@@ -1,17 +1,25 @@
 import axios from 'axios';
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { API } from '../helpers/const';
+import { createContext } from '';
 
-const NewsContext = () => {
+const newsContext = createContext()
+export const useNews = () => useContext(newsContext)
+
+const NewsContext = ({children}) => {
     const [news,setNews] = useState([])
 
     async function getNews(){
-        let res = await (await axios.get(API)).data
+        let res = await axios(API)
+        setNews(res.data)
+    }
+    const values = {
+
     }
     return (
-        <div>
-            
-        </div>
+        <newsContext.Provider value={values}>
+            {children}
+        </newsContext.Provider>
     );
 };
 

@@ -6,15 +6,9 @@ import Favourite from "./components/favourites/Favourite";
 import Footer from "./components/footer/Footer";
 
 function App() {
-  return (
-    <div className="App">
-      <Header />
-      <Hero />
-      <NewsList />
-      <Favourite />
-      <Footer />
-    </div>
-  );
+  return <div className="App">
+    
+  </div>;
 }
 
 export default App;
