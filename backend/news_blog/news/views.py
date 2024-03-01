@@ -7,7 +7,16 @@ from .serializers import NewsSerializer, CategorySerializer, NewsDetailSerialize
 class CategoryList(generics.ListAPIView):
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
-#
+
+class CategoryDetail(generics.ListAPIView):
+    serializer_class = NewsSerializer
+
+    def get_queryset(self):
+        urls = self.kwargs['urls']
+        category = Category.objects.get(urls=urls)
+        queryset = News.objects.filter(category=category)
+        return queryset
+
 class NewsList(generics.ListAPIView):
     queryset = News.objects.all()
     serializer_class = NewsSerializer

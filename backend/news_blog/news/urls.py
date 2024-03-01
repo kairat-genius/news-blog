@@ -5,6 +5,7 @@ from .views import *
 urlpatterns = [
     path('', NewsList.as_view(), name='Главная'),
     path('category/', CategoryList.as_view()),
+    path('category/<slug:urls>/', CategoryDetail.as_view()),
     path('details/<slug:urls>/', NewsDetail.as_view()),
     #admin panel
     path('admin_panel/category', CategoryAddAdmin.as_view(), name='category_add'),
