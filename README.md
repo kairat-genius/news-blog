@@ -10,3 +10,10 @@ Back-end
 Создания супер суперпользователя: python manage.py createsuperuses
 
 Запустить Джанго: python manage.py runserver
+
+
+
+
+
+
+
