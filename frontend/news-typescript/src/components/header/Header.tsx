@@ -1,12 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Header.css";
 import PersonIcon from "@mui/icons-material/Person";
 import SearchIcon from "@mui/icons-material/Search";
 import AdminPanelSettingsIcon from "@mui/icons-material/AdminPanelSettings";
 import { useNavigate } from "react-router-dom";
+import { useNews } from "../../context/NewsContext";
+import Navbar from "./Navbar";
 
 const Header = () => {
+  const { news, getNews } = useNews();
+  console.log(news.categories);
   const navigate = useNavigate();
+  useEffect(() => {
+    getNews();
+  }, []);
   return (
     <div id="header">
       <div className="container">
@@ -18,14 +25,7 @@ const Header = () => {
               alt=""
             />
           </div>
-          <div className="navbar">
-            <p></p>
-            <p>Poliyics</p>
-            <p>Business</p>
-            <p onClick={() => navigate("/sports")}>Sports</p>
-            <p>Travel</p>
-            <p>Podcasts</p>
-          </div>
+          {news.categories.map((el:any) => <Navbar el={el}/>)}
           <div className="login-panel">
             <SearchIcon sx={{ fontSize: "31px", cursor: "pointer" }} />
             <AdminPanelSettingsIcon

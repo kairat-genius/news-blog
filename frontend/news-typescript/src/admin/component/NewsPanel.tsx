@@ -1,11 +1,9 @@
-import React from 'react';
+import React from "react";
 
 const NewsPanel = () => {
-    return (
-        <div>
-            
-        </div>
-    );
+  return <div>
+    
+  </div>;
 };
 
 export default NewsPanel;
